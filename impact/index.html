@@ -62,9 +62,16 @@
   .numbers p { margin: 0; max-width: none; }
   .numbers__note { margin-top: 32px; font: 400 var(--t-base)/1.55 var(--body); max-width: 56ch; letter-spacing: 0; color: var(--on-teal); }
 
+  .numbers__grid { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gap); row-gap: 40px; align-items: center; }
+  .numbers__copy { grid-column: 1 / 8; }
+  .numbers__art { grid-column: 8 / 13; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .numbers__art .frame { aspect-ratio: 4 / 5; }
+  .numbers__art .frame:last-child { margin-top: 48px; }
+  @media (max-width: 900px) { .numbers__copy, .numbers__art { grid-column: 1 / -1; } .numbers__art .frame:last-child { margin-top: 0; } }
+
   /* Timeline */
-  .tl { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gap); row-gap: 8px; margin-top: 56px; }
-  .tl__row { grid-column: 1 / -1; display: grid; grid-template-columns: 170px 1fr; gap: var(--gap); padding: 30px 0; border-top: 1px solid var(--mist); align-items: start; }
+  .tl { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gap); row-gap: 0; margin-top: 40px; }
+  .tl__row { grid-column: 1 / -1; display: grid; grid-template-columns: 170px 1fr; gap: var(--gap); padding: 26px 0; border-top: 1px solid var(--mist); align-items: center; }
   .tl__year { font-family: var(--display); font-weight: 900; font-size: var(--t-2xl); line-height: 0.9; color: var(--teal-deep); }
   .tl__year--word { font-size: var(--t-l); padding-top: 6px; }
   .tl__row h3 { font-size: var(--t-l); margin-bottom: 8px; }
@@ -97,8 +104,9 @@
   @media (max-width: 600px) { .ev__item { grid-column: 1 / -1; } }
 
   /* Ways */
-  .ways { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gap); row-gap: 40px; }
+  .ways { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gap); row-gap: 40px; align-items: start; }
   .ways__lead { grid-column: 1 / 6; }
+  .ways__lead .frame { aspect-ratio: 4 / 3; margin-top: 32px; }
   .ways__lead h2 { max-width: 10ch; }
   .ways__list { grid-column: 7 / 13; display: grid; gap: 0; }
   .ways__list div { padding: 26px 0; border-top: 1px solid color-mix(in oklab, var(--cream) 18%, transparent); }
@@ -189,46 +197,58 @@
   </section>
 
   <section id="numbers" class="wrap band bg-teal on-teal">
-    <div class="numbers">
-      <p class="rv"><span class="num" data-count="17">17</span> years.</p>
-      <p class="rv" data-delay="0.06"><span class="num" data-count="15">15</span> Walk-a-Thons.</p>
-      <p class="rv" data-delay="0.12"><span class="num" data-count="3">3</span> Golf Classics.</p>
-      <p class="rv" data-delay="0.15"><span class="num" data-count="100" data-suffix="%">100%</span> of Golf Classic proceeds to programs.</p>
-      <p class="rv" data-delay="0.18"><span class="num" data-count="8">8</span> impact modules.</p>
-      <p class="rv" data-delay="0.24"><span class="num" data-count="11">11</span> mentorship topics.</p>
-      <p class="rv" data-delay="0.3">One girl at a time.</p>
+    <div class="numbers__grid">
+      <div class="numbers__copy">
+        <div class="numbers">
+          <p class="rv"><span class="num" data-count="17">17</span> years.</p>
+          <p class="rv" data-delay="0.06"><span class="num" data-count="15">15</span> Walk-a-Thons.</p>
+          <p class="rv" data-delay="0.12"><span class="num" data-count="3">3</span> Golf Classics.</p>
+          <p class="rv" data-delay="0.15"><span class="num" data-count="100" data-suffix="%">100%</span> of Golf Classic proceeds to programs.</p>
+          <p class="rv" data-delay="0.18"><span class="num" data-count="8">8</span> impact modules.</p>
+          <p class="rv" data-delay="0.24"><span class="num" data-count="11">11</span> mentorship topics.</p>
+          <p class="rv" data-delay="0.3">One girl at a time.</p>
+        </div>
+        <p class="numbers__note rv" data-delay="0.36">Concept preview: every figure above comes from huhh.org. Girls served, districts reached and scholarships awarded are HUHH's numbers to add; the band is built to carry them.</p>
+      </div>
+      <div class="numbers__art">
+        <div class="frame rv-img"><img src="../assets/img/real-paint-450.webp" alt="Two HUHH girls in aprons painting side by side" loading="lazy"></div>
+        <div class="frame rv-img"><img src="../assets/img/real-event-450.webp" alt="A HUHH participant and a program leader at a community event" loading="lazy"></div>
+      </div>
     </div>
-    <p class="numbers__note rv" data-delay="0.36">Concept preview: every figure above comes from huhh.org. Girls served, districts reached and scholarships awarded are HUHH's numbers to add; the band is built to carry them.</p>
   </section>
 
   <section id="timeline" class="wrap band">
     <h2 class="rv">How we got here.</h2>
     <div class="tl">
-      <div class="tl__row rv">
+      <div class="tl__row tl__row--photo rv">
         <div class="tl__year">2008</div>
         <div><h3>The vision</h3><p>A young lady decides her life's issues and obstacles are not hers alone, but shared by so many other teenage girls. Helping Us Help Her begins.</p></div>
+        <div class="frame rv-img"><img src="../assets/img/story-notebook-700.webp" alt="A girl writing in a notebook in morning light" loading="lazy"></div>
       </div>
       <div class="tl__row tl__row--photo rv">
         <div class="tl__year">2009</div>
         <div><h3>Established in Grand Prairie</h3><p>HUHH is established with a mission to provide developmental tools that equip teenage girls to become morally excellent, and a promise: developing the You in her, so everyone will desire to know the Her in you.</p></div>
         <div class="frame rv-img"><img src="../assets/img/real-seminar-480.webp" alt="Girls seated on a classroom floor during a HUHH seminar" loading="lazy"></div>
       </div>
-      <div class="tl__row rv">
+      <div class="tl__row tl__row--photo rv">
         <div class="tl__year tl__year--word">Every year</div>
         <div><h3>The Walk-a-Thon becomes a tradition</h3><p>A timed 5K and a morning walk through Grand Prairie for the girls. 2026 marked the 15th Annual HUHH 5K Walk-a-Thon at EPIC Central.</p></div>
+        <div class="frame rv-img"><img src="../assets/img/story-5k-600.webp" alt="Walkers under a balloon arch at sunrise" loading="lazy"></div>
       </div>
-      <div class="tl__row rv">
+      <div class="tl__row tl__row--photo rv">
         <div class="tl__year">2016</div>
         <div><h3>The story on film</h3><p>The Otis and Rosie Brown Foundation features Dr. Gray and HUHH in a short documentary about the program and the girls it serves.</p></div>
+        <div class="frame rv-img"><img src="../assets/img/impact-cover-600.webp" alt="A room of girls with hands raised" loading="lazy"></div>
       </div>
       <div class="tl__row tl__row--photo rv">
         <div class="tl__year tl__year--word">Mentorship</div>
         <div><h3>The Mentorship Program</h3><p>An inaugural mentorship program for older participants: a professional in her field of interest, career shadowing and internships, and support that continues past high school into college and a career.</p></div>
         <div class="frame rv-img"><img src="../assets/img/story-mentor-700.webp" alt="A mentor and a teenager at a cafe window" loading="lazy"></div>
       </div>
-      <div class="tl__row rv">
+      <div class="tl__row tl__row--photo rv">
         <div class="tl__year">2024</div>
         <div><h3>The first Golf Classic</h3><p>Golfers, business leaders and sponsors gather for a day of friendly competition and giving. By 2026 it is the 3rd Annual HUHH Charity Golf Tournament at Waterchase Golf Club, with 100% of proceeds going to HUHH programs.</p></div>
+        <div class="frame rv-img"><img src="../assets/img/golf-cart-600.webp" alt="A golf cart on a misty cart path at sunrise" loading="lazy"></div>
       </div>
       <div class="tl__row tl__row--photo rv">
         <div class="tl__year">2026</div>
@@ -325,6 +345,7 @@
         <h2 class="rv">Where our help comes from.</h2>
         <p class="rv" data-delay="0.08" style="margin-top:20px">Volunteers, sponsors, partners and advocates. Here is how people join in.</p>
         <a class="btn rv" data-delay="0.12" href="../golf/#sponsor">See the sponsor menu</a>
+        <div class="frame rv-img"><img src="../assets/img/volunteer-600.webp" srcset="../assets/img/volunteer-600.webp 600w, ../assets/img/volunteer-1000.webp 1000w" sizes="(max-width: 900px) 100vw, 40vw" alt="Volunteers handing out water at an event table" loading="lazy"></div>
       </div>
       <div class="ways__list">
         <div class="rv"><h3>Volunteering</h3><p>The heartbeat of HUHH. Individuals with a genuine desire to serve and impact the lives of young girls, at events and program days.</p></div>

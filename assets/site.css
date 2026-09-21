@@ -26,8 +26,8 @@
   --t-4xl: clamp(3.8rem, 9.4vw, 7.95rem);   /* 96 to 127 */
 
   --gutter: clamp(20px, 5vw, 88px);
-  --band: clamp(96px, 14vw, 200px);
-  --band-s: clamp(56px, 8vw, 120px);
+  --band: clamp(72px, 9vw, 128px);
+  --band-s: clamp(48px, 6vw, 88px);
   --gap: clamp(16px, 2.4vw, 32px);
   --radius: 8px;
 
@@ -162,14 +162,14 @@ html.menu-open .nav .logo-dark { opacity: 1; }
 .loader__mark { position: relative; width: min(46vw, 260px); opacity: 0; transform: scale(0.95); }
 .no-js .loader { display: none; }
 
-/* Reveals (JS-scoped so the page reads with scripting off) */
+/* Reveals (JS-scoped so the page reads with scripting off). Photos are never gated: the only thing a
+   failed reveal can cost is a 4% zoom. */
 .js .rv { opacity: 0; transform: translateY(24px); }
-.js .rv-img { clip-path: inset(0 0 100% 0); }
-.js .rv-img img { transform: scale(1.06); transform-origin: 50% 100%; }
+.js .rv-img img { transform: scale(1.04); transform-origin: 50% 100%; transition: transform 1400ms var(--ease-out); }
+.js .rv-img.is-in img { transform: none; }
 @media (prefers-reduced-motion: reduce) {
   .js .rv { transform: none; }
-  .js .rv-img { clip-path: none; }
-  .js .rv-img img { transform: none; }
+  .js .rv-img img { transform: none; transition: none; }
 }
 
 /* Frames */

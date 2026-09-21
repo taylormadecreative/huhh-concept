@@ -11,20 +11,22 @@
   function $$(s, c) { return Array.prototype.slice.call((c || doc).querySelectorAll(s)); }
 
   /* ---------- Scroll reveals: IntersectionObserver, no library dependency ---------- */
-  function showEl(el) {
-    if (el.classList.contains("rv")) { el.style.transition = reduce ? "opacity 240ms ease" : "opacity 900ms cubic-bezier(0.23,1,0.32,1), transform 900ms cubic-bezier(0.23,1,0.32,1)"; el.style.transitionDelay = (parseFloat(el.dataset.delay) || 0) + "s"; el.style.opacity = 1; el.style.transform = "none"; }
-    if (el.classList.contains("rv-img")) {
-      var im = $("img", el);
-      el.style.transition = reduce ? "none" : "clip-path 1100ms cubic-bezier(0.23,1,0.32,1)"; el.style.clipPath = "inset(0 0 0% 0)";
-      if (im) { im.style.transition = reduce ? "none" : "transform 1500ms cubic-bezier(0.23,1,0.32,1)"; im.style.transform = "none"; }
+  function showEl(el, instant) {
+    if (el.classList.contains("rv")) {
+      el.style.transition = (reduce || instant) ? "none" : "opacity 900ms cubic-bezier(0.23,1,0.32,1), transform 900ms cubic-bezier(0.23,1,0.32,1)";
+      el.style.transitionDelay = instant ? "0s" : (parseFloat(el.dataset.delay) || 0) + "s";
+      el.style.opacity = 1; el.style.transform = "none";
     }
+    if (el.classList.contains("rv-img")) el.classList.add("is-in");
   }
-  function showAll() { $$(".rv, .rv-img").forEach(showEl); }
+  function showAll(instant) { $$(".rv, .rv-img").forEach(function (el) { showEl(el, instant); }); }
+  /* A tab that loads in the background never animates. When it comes forward, everything is simply there. */
+  doc.addEventListener("visibilitychange", function () { if (!doc.hidden) { showAll(true); finishLoader(true); } });
   var revealsStarted = false;
   function startReveals() {
     if (revealsStarted) return; revealsStarted = true;
     var els = $$(".rv, .rv-img");
-    if (reduce || !("IntersectionObserver" in window)) { els.forEach(showEl); return; }
+    if (reduce || doc.hidden || !("IntersectionObserver" in window)) { els.forEach(function (el) { showEl(el, true); }); return; }
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) { if (e.isIntersecting) { showEl(e.target); io.unobserve(e.target); } });
     }, { rootMargin: "0px 0px -8% 0px", threshold: 0.01 });
@@ -35,20 +37,22 @@
 
   /* ---------- Preloader (home only) ---------- */
   var loader = $("#loader");
-  function finishLoader() {
+  function finishLoader(instant) {
     if (!loader || loader.dataset.done) return;
     loader.dataset.done = "1";
     loader.setAttribute("aria-hidden", "true");
-    var done = function () { loader.remove(); startReveals(); };
-    if (reduce || !hasGsap) { loader.style.transition = "opacity 240ms ease"; loader.style.opacity = 0; setTimeout(done, 260); return; }
-    gsap.to(loader, { clipPath: "inset(0 0 100% 0)", duration: 0.55, ease: "expo.inOut", onComplete: done });
+    var done = function () { if (loader.parentNode) loader.parentNode.removeChild(loader); startReveals(); };
+    if (instant || reduce || doc.hidden) { done(); return; }
+    loader.style.transition = "clip-path 550ms cubic-bezier(0.77,0,0.175,1)";
+    loader.style.clipPath = "inset(0 0 100% 0)";
     setTimeout(startReveals, 250); /* the hero wakes while the wipe is still clearing */
+    setTimeout(done, 600);
   }
   if (loader) {
     var seen = false;
     try { seen = sessionStorage.getItem("huhh-intro") === "1"; sessionStorage.setItem("huhh-intro", "1"); } catch (e) {}
     var frames = $$(".loader__frames img", loader), mark = $(".loader__mark", loader);
-    if (seen || reduce || !hasGsap) { finishLoader(); }
+    if (seen || reduce || doc.hidden || !hasGsap) { finishLoader(true); }
     else {
       frames.forEach(function (f) { if (f.dataset.src) f.src = f.dataset.src; });
       var tl = gsap.timeline({ onComplete: finishLoader });
