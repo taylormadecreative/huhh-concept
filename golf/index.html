@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4th Annual HUHH Golf Classic 2027</title>
+<meta name="description" content="Every swing makes a difference. Sponsor a tier, field a team of four or take a hole at the 2027 Helping Us Help Her Charity Golf Tournament.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Helping Us Help Her">
+<meta property="og:title" content="4th Annual HUHH Golf Classic 2027">
+<meta property="og:description" content="Every swing makes a difference. Sponsorships from $100 to $5,000; 100% of proceeds to HUHH programs.">
+<meta property="og:url" content="https://taylormadecreative.github.io/huhh-concept/golf/">
+<meta property="og:image" content="https://taylormadecreative.github.io/huhh-concept/assets/img/og-golf.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#123f45">
+<link rel="icon" href="../assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,700..900&family=Figtree:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+<script>document.documentElement.classList.replace("no-js","js");</script>
+<style>
+  /* Hero: editorial split on a photo bed */
+  .ghero { position: relative; min-height: 100svh; display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gap); align-items: end; padding-top: 110px; padding-bottom: clamp(40px, 6vw, 80px); color: var(--cream); background: var(--teal-ink); overflow: hidden; }
+  .ghero__img { position: absolute; inset: 0; }
+  .ghero__img img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%; }
+  .ghero__plate { grid-column: 1 / 8; position: relative; z-index: 2; background: var(--teal-ink); padding: clamp(28px, 4vw, 56px); }
+  .ghero__plate h1 { color: var(--cream); max-width: 10ch; }
+  .ghero__plate .lede { margin: 20px 0 30px; color: color-mix(in oklab, var(--cream) 85%, var(--teal)); }
+  .ghero__cta { display: flex; flex-wrap: wrap; gap: 14px; }
+  .ghero__date { grid-column: 9 / 13; position: relative; z-index: 2; background: var(--yellow); color: var(--ink); padding: clamp(24px, 3vw, 40px); align-self: end; }
+  .ghero__date strong { display: block; font-family: var(--display); font-weight: 900; font-size: var(--t-2xl); line-height: 0.9; }
+  .ghero__date p { margin: 12px 0 0; max-width: none; font-weight: 500; }
+  @media (max-width: 900px) { .ghero { min-height: 0; } .ghero__plate, .ghero__date { grid-column: 1 / -1; } .ghero__img { height: 60vh; } .ghero__plate { margin-top: 36vh; } }
+
+  /* Why */
+  .why { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gap); row-gap: 40px; align-items: center; }
+  .why__copy { grid-column: 1 / 7; }
+  .why__copy h2 { max-width: 12ch; }
+  .why__copy .facts { margin: 28px 0 0; padding: 0; list-style: none; display: grid; gap: 0; border-top: 1px solid var(--mist); }
+  .why__copy .facts li { padding: 16px 0; border-bottom: 1px solid var(--mist); display: grid; grid-template-columns: 1fr auto; gap: 16px; }
+  .why__copy .facts strong { font-family: var(--display); font-size: var(--t-m); font-weight: 800; color: var(--teal-deep); }
+  .why__art { grid-column: 8 / 13; }
+  .why__art .frame { aspect-ratio: 4 / 5; }
+  @media (max-width: 900px) { .why__copy, .why__art { grid-column: 1 / -1; } }
+
+  /* Tier stack */
+  .stack { display: grid; gap: 20px; margin-top: 48px; }
+  .stack__card { position: sticky; top: 84px; background: var(--paper); border: 1px solid var(--mist); display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gap); padding: clamp(24px, 3.4vw, 44px); transform-origin: top center; will-change: transform; }
+  .stack__card:nth-child(2) { top: 96px; } .stack__card:nth-child(3) { top: 108px; } .stack__card:nth-child(4) { top: 120px; } .stack__card:nth-child(5) { top: 132px; } .stack__card:nth-child(6) { top: 144px; }
+  .tier__price { grid-column: 1 / 4; font-family: var(--display); font-weight: 900; font-size: var(--t-3xl); line-height: 0.9; color: var(--teal-deep); }
+  .tier__price small { display: block; font: 600 var(--t-xs)/1.4 var(--body); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); margin-top: 10px; }
+  .tier__body { grid-column: 4 / 10; }
+  .tier__body h3 { font-size: var(--t-xl); margin-bottom: 6px; }
+  .tier__body p { margin: 0 0 12px; color: var(--ink-soft); }
+  .tier__body ul { margin: 0; padding-left: 20px; }
+  .tier__body li { margin-bottom: 4px; }
+  .tier__act { grid-column: 10 / 13; display: grid; align-content: start; justify-items: start; gap: 12px; }
+  .tier__act .btn { width: 100%; justify-content: center; }
+  .tier__act .small { color: var(--ink-soft); }
+  .stack__card.is-title { background: var(--teal-ink); color: var(--cream); border-color: transparent; }
+  .stack__card.is-title .tier__price { color: var(--yellow); }
+  .stack__card.is-title .tier__price small, .stack__card.is-title .tier__body p, .stack__card.is-title .tier__act .small { color: color-mix(in oklab, var(--cream) 75%, var(--teal)); }
+  @media (max-width: 900px) { .stack__card { grid-template-columns: 1fr; row-gap: 18px; position: static; } .tier__price, .tier__body, .tier__act { grid-column: 1 / -1; } }
+
+  /* Play */
+  .play { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gap); row-gap: 32px; align-items: center; }
+  .play__art { grid-column: 1 / 7; }
+  .play__art .frame { aspect-ratio: 3 / 2; }
+  .play__copy { grid-column: 8 / 13; }
+  .play__copy h2 { max-width: 10ch; }
+  .play__opts { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+  .play__opts div { border: 1.5px solid var(--mist); padding: 20px; }
+  .play__opts strong { display: block; font-family: var(--display); font-weight: 900; font-size: var(--t-2xl); line-height: 0.9; color: var(--teal-deep); }
+  .play__opts span { display: block; margin-top: 8px; font-weight: 600; }
+  @media (max-width: 900px) { .play__art, .play__copy { grid-column: 1 / -1; } }
+
+  /* Give + inquire */
+  .gi { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gap); row-gap: 40px; align-items: start; }
+  .gi__copy { grid-column: 1 / 6; }
+  .gi__copy h2 { max-width: 12ch; }
+  .designate { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 8px; }
+  .designate button { border: 1.5px solid color-mix(in oklab, var(--cream) 30%, transparent); background: transparent; color: var(--cream); padding: 10px 14px; border-radius: 999px; font: 600 var(--t-s)/1 var(--body); cursor: pointer; transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease, transform 160ms var(--ease-out); }
+  .designate button:active { transform: scale(0.97); }
+  .designate button[aria-pressed="true"] { background: var(--yellow); color: var(--ink); border-color: var(--yellow); }
+  .gi__form { grid-column: 7 / 13; }
+  .gi__widget { grid-column: 1 / 6; justify-self: start; width: 100%; max-width: 460px; background: var(--paper); color: var(--ink); padding: 8px; min-height: 420px; }
+  .gi__cash { grid-column: 7 / 13; align-self: center; }
+  @media (max-width: 900px) { .gi__copy, .gi__form, .gi__widget, .gi__cash { grid-column: 1 / -1; } }
+</style>
+</head>
+<body>
+<a class="sr-only" href="#main">Skip to content</a>
+<header class="nav">
+  <a class="nav__logo" href="../" aria-label="Helping Us Help Her, home">
+    <img class="logo-light" src="../assets/img/logo-light.webp" alt="">
+    <img class="logo-dark" src="../assets/img/logo-dark.webp" alt="">
+  </a>
+  <ul class="nav__links">
+    <li><a href="../#programs">Programs</a></li>
+    <li><a href="../impact/">Impact report</a></li>
+    <li><a href="./" aria-current="page">Golf Classic</a></li>
+    <li><a href="../#volunteer">Volunteer</a></li>
+  </ul>
+  <div class="nav__cta"><a class="btn" href="#sponsor">Sponsor</a></div>
+  <button class="nav__burger" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+<nav id="menu" class="menu" aria-hidden="true">
+  <a href="../#programs">Programs</a>
+  <a href="../impact/">Impact report</a>
+  <a href="./">Golf Classic</a>
+  <a href="#sponsor">Sponsor</a>
+  <a href="#give">Give</a>
+  <p class="menu__meta">410 NW 11th St., Suite 113, Grand Prairie, Texas 75050<br>(972) 639-3096 · info@huhh.org</p>
+</nav>
+
+<main id="main">
+  <section class="ghero wrap">
+    <div class="ghero__img"><img src="../assets/img/golf-hero-1536.webp" srcset="../assets/img/golf-hero-1000.webp 1000w, ../assets/img/golf-hero-1536.webp 1536w" sizes="100vw" alt="A misty fairway at dawn under oak trees" fetchpriority="high"></div>
+    <div class="ghero__plate on-dark">
+      <p class="kicker rv">4th Annual HUHH Charity Golf Tournament</p>
+      <h1 class="rv" data-delay="0.08">Every swing makes a difference.</h1>
+      <p class="lede rv" data-delay="0.16">Golfers, business leaders, sponsors and community supporters. One day of friendly competition, and 100% of the proceeds to the girls of Helping Us Help Her.</p>
+      <div class="ghero__cta rv" data-delay="0.24">
+        <a class="btn" href="#sponsor">Sponsor a tier</a>
+        <a class="btn btn--ghost" href="#play">Play in it</a>
+      </div>
+    </div>
+    <div class="ghero__date rv" data-delay="0.3">
+      <strong>Summer 2027</strong>
+      <p>Date and course to be announced. The 2026 Classic played Waterchase Golf Club in Fort Worth on July 17.</p>
+    </div>
+  </section>
+
+  <section class="wrap band">
+    <div class="why">
+      <div class="why__copy">
+        <h2 class="rv">Together, we are driving change. One swing at a time.</h2>
+        <p class="rv" data-delay="0.08" style="margin-top:22px">Whether you are competing on the course, sponsoring a hole or supporting the event as a donor, your participation provides resources, opportunities and life-changing experiences for the young women HUHH serves: mentorship, education, leadership development and community outreach.</p>
+        <ul class="facts rv" data-delay="0.14">
+          <li><span>Proceeds to HUHH programs</span><strong>100%</strong></li>
+          <li><span>Check-in, then a shotgun start (2026)</span><strong>7 AM · 8 AM</strong></li>
+          <li><span>Hole-in-one prize (2026)</span><strong>$1,000</strong></li>
+          <li><span>Sponsorship tiers</span><strong>6</strong></li>
+        </ul>
+      </div>
+      <div class="why__art">
+        <div class="frame rv-img"><img src="../assets/img/golf-cart-1000.webp" srcset="../assets/img/golf-cart-600.webp 600w, ../assets/img/golf-cart-1000.webp 1000w, ../assets/img/golf-cart-1536.webp 1536w" sizes="(max-width: 900px) 100vw, 40vw" alt="A golf cart on a misty cart path at sunrise" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sponsor" class="wrap band bg-paper">
+    <h2 class="rv">The sponsor menu.</h2>
+    <p class="lede rv" data-delay="0.08">Six ways to put your name on the day. The 2026 menu is shown; 2027 pricing will be confirmed with the date.</p>
+    <div class="stack">
+      <article class="stack__card is-title">
+        <div class="tier__price">$5,000<small>Title sponsor</small></div>
+        <div class="tier__body">
+          <h3>Platinum Ring Title Sponsor</h3>
+          <p>Become the official tournament sponsor.</p>
+          <ul>
+            <li>Company logo included in the event logo on all marketing</li>
+            <li>Logo on all email blasts, social media posts and web content</li>
+            <li>Announced and thanked during welcome announcements</li>
+            <li>Dedicated title sponsor logo banner at registration</li>
+            <li>Two minutes of speaking time during the reception</li>
+          </ul>
+        </div>
+        <div class="tier__act"><button class="btn" type="button" data-tier="Platinum Ring Title Sponsor ($5,000)">Choose this tier</button><span class="small">One available</span></div>
+      </article>
+      <article class="stack__card">
+        <div class="tier__price">$2,500<small>Reception</small></div>
+        <div class="tier__body">
+          <h3>Reception Sponsor</h3>
+          <p>Sponsor the tournament awards reception.</p>
+          <ul>
+            <li>Banner with company logo displayed</li>
+            <li>Logo on all email blasts, social media posts and web content</li>
+            <li>Logo on all centerpieces at the reception</li>
+            <li>Website and social media recognition</li>
+          </ul>
+        </div>
+        <div class="tier__act"><button class="btn btn--ink" type="button" data-tier="Reception Sponsor ($2,500)">Choose this tier</button></div>
+      </article>
+      <article class="stack__card">
+        <div class="tier__price">$1,500<small>Beverage cart</small></div>
+        <div class="tier__body">
+          <h3>Beverage Cart Sponsor</h3>
+          <p>Sponsor a beverage cart on the course.</p>
+          <ul>
+            <li>Logo sign on one beverage cart</li>
+            <li>Cart stocked with company-branded koozies</li>
+            <li>Logo on all centerpieces at the reception</li>
+            <li>Website and social media recognition</li>
+          </ul>
+        </div>
+        <div class="tier__act"><button class="btn btn--ink" type="button" data-tier="Beverage Cart Sponsor ($1,500)">Choose this tier</button></div>
+      </article>
+      <article class="stack__card">
+        <div class="tier__price">$500<small>Hole sponsor</small></div>
+        <div class="tier__body">
+          <h3>HUHH Hole Sponsor</h3>
+          <p>Sponsor 1 of 18 holes on the course.</p>
+          <ul>
+            <li>Sign with company logo at your hole</li>
+            <li>Set up a marketing table or activity at your hole</li>
+            <li>Logo on all email blasts, social media posts and web content</li>
+            <li>Website and social media recognition</li>
+          </ul>
+        </div>
+        <div class="tier__act"><button class="btn btn--ink" type="button" data-tier="HUHH Hole Sponsor ($500)">Choose this tier</button><span class="small">18 available</span></div>
+      </article>
+      <article class="stack__card">
+        <div class="tier__price">$400<small>Team sponsor</small></div>
+        <div class="tier__body">
+          <h3>Team Sponsor</h3>
+          <p>Sponsor a team in the tournament.</p>
+          <ul>
+            <li>A team of four players</li>
+            <li>Swag bags for each player</li>
+          </ul>
+        </div>
+        <div class="tier__act"><button class="btn btn--ink" type="button" data-tier="Team Sponsor ($400)">Choose this tier</button></div>
+      </article>
+      <article class="stack__card">
+        <div class="tier__price">$100<small>Vendor table</small></div>
+        <div class="tier__body">
+          <h3>Vendor Spotlight</h3>
+          <p>Register as a table vendor for the tournament and meet every golfer, sponsor and volunteer on site.</p>
+        </div>
+        <div class="tier__act"><button class="btn btn--ink" type="button" data-tier="Vendor Spotlight ($100)">Reserve a table</button></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="play" class="wrap band">
+    <div class="play">
+      <div class="play__art">
+        <div class="frame rv-img"><img src="../assets/img/golf-hero-1000.webp" srcset="../assets/img/golf-hero-600.webp 600w, ../assets/img/golf-hero-1000.webp 1000w" sizes="(max-width: 900px) 100vw, 50vw" alt="Long shadows across a dew-covered fairway" loading="lazy"></div>
+      </div>
+      <div class="play__copy">
+        <h2 class="rv">Play in it.</h2>
+        <p class="rv" data-delay="0.08" style="margin-top:20px">Check in at 7, shotgun start at 8, awards at the reception. Registration opens with the 2027 date; 2026 pricing shown.</p>
+        <div class="play__opts rv" data-delay="0.14">
+          <div><strong>$125</strong><span>Individual golfer</span></div>
+          <div><strong>$400</strong><span>Team of four</span></div>
+        </div>
+        <button class="btn btn--ink rv" type="button" data-tier="Player registration (individual or team)" data-delay="0.2">Tell me when registration opens</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="give" class="wrap band bg-ink on-dark">
+    <div class="gi">
+      <div class="gi__copy">
+        <h2 class="rv">Sponsor, register or simply give.</h2>
+        <p class="rv" data-delay="0.08" style="margin-top:20px">Pick what you are interested in and tell us who you are. A HUHH committee member will follow up with the details.</p>
+        <div class="designate rv" data-delay="0.12" role="group" aria-label="I am interested in">
+          <button type="button" data-designate="Platinum Ring Title Sponsor ($5,000)" aria-pressed="false">Title sponsor</button>
+          <button type="button" data-designate="Reception Sponsor ($2,500)" aria-pressed="false">Reception</button>
+          <button type="button" data-designate="Beverage Cart Sponsor ($1,500)" aria-pressed="false">Beverage cart</button>
+          <button type="button" data-designate="HUHH Hole Sponsor ($500)" aria-pressed="false">Hole</button>
+          <button type="button" data-designate="Team Sponsor ($400)" aria-pressed="false">Team</button>
+          <button type="button" data-designate="Vendor Spotlight ($100)" aria-pressed="false">Vendor table</button>
+          <button type="button" data-designate="Player registration (individual or team)" aria-pressed="false">Playing</button>
+        </div>
+      </div>
+      <form id="inquire" class="gi__form form rv" data-demo novalidate data-delay="0.1">
+        <div class="form__fields">
+          <div class="row">
+            <div class="field"><label for="s-name">Name</label><input id="s-name" name="name" type="text" autocomplete="name" required></div>
+            <div class="field"><label for="s-company">Company or organization</label><input id="s-company" name="company" type="text" autocomplete="organization"></div>
+          </div>
+          <div class="row">
+            <div class="field"><label for="s-email">Email</label><input id="s-email" name="email" type="email" autocomplete="email" required></div>
+            <div class="field"><label for="s-phone">Phone</label><input id="s-phone" name="phone" type="tel" autocomplete="tel"></div>
+          </div>
+          <div class="field"><label for="interest">I am interested in</label>
+            <select id="interest" name="interest" required>
+              <option value="">Choose one</option>
+              <option>Platinum Ring Title Sponsor ($5,000)</option>
+              <option>Reception Sponsor ($2,500)</option>
+              <option>Beverage Cart Sponsor ($1,500)</option>
+              <option>HUHH Hole Sponsor ($500)</option>
+              <option>Team Sponsor ($400)</option>
+              <option>Vendor Spotlight ($100)</option>
+              <option>Player registration (individual or team)</option>
+              <option>Volunteering on the tournament committee</option>
+            </select>
+          </div>
+          <div class="field"><label for="s-msg">Anything we should know?</label><textarea id="s-msg" name="message"></textarea></div>
+          <p class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></p>
+          <div><button class="btn" type="submit">Send my interest</button></div>
+          <p class="form__note">Concept preview: this form is not connected yet. On the live site it delivers to info@huhh.org.</p>
+        </div>
+        <div class="form__done" role="status">
+          <h3>Thank you, <span data-name></span>.</h3>
+          <p>A HUHH committee member will reach out with the 2027 details as soon as the date is set.</p>
+        </div>
+      </form>
+      <div class="gi__widget rv" data-delay="0.12">
+        <givebutter-widget id="j13log"></givebutter-widget>
+        <noscript><p style="padding:20px">Give at <a href="https://huhh.org/donate/">huhh.org/donate</a>.</p></noscript>
+      </div>
+      <div class="gi__cash rv" data-delay="0.16">
+        <h3 style="font-family:var(--body);font-size:var(--t-m);font-weight:700;color:var(--yellow);margin-bottom:8px">Give without waiting for tee time</h3>
+        <p>One-time or monthly, right here. Prefer Cash App? Send to <a href="https://cash.app/$helpingushelpher">$helpingushelpher</a>.</p>
+        <p>Every gift supports mentorship, counseling and life-skills training, wellness activities and the events that bring the community together.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer wrap">
+  <div class="grid">
+    <div class="footer__brand">
+      <img src="../assets/img/logo-light.webp" alt="Helping Us Help Her">
+      <p style="margin-top:18px">Developing the YOU in her, so everyone will desire to know the HER in you.</p>
+      <a href="https://maps.apple.com/?q=410+NW+11th+St+Suite+113+Grand+Prairie+TX+75050">410 NW 11th St., Suite 113<br>Grand Prairie, Texas 75050</a>
+      <a href="tel:+19726393096">(972) 639-3096</a>
+      <a href="mailto:info@huhh.org">info@huhh.org</a>
+    </div>
+    <div class="footer__col">
+      <h4>Programs</h4>
+      <a href="../#programs">The eight modules</a>
+      <a href="../impact/#programs">Choices Beyond Reality</a>
+      <a href="../impact/#programs">Mentorship Program</a>
+    </div>
+    <div class="footer__col">
+      <h4>Events</h4>
+      <a href="./">Golf Classic 2027</a>
+      <a href="../impact/#events">5K Walk-a-Thon</a>
+      <a href="../impact/#events">Dream It Be It</a>
+    </div>
+    <div class="footer__col">
+      <h4>Support</h4>
+      <a href="../#give">Give</a>
+      <a href="#sponsor">Sponsor</a>
+      <a href="../#volunteer">Volunteer</a>
+      <a href="../impact/">Impact report</a>
+    </div>
+  </div>
+  <div class="footer__meta">
+    <p>© 2026 Helping Us Help Her. All rights reserved.</p>
+    <p>Concept preview by Taylormade Creative. Some photographs are creative-direction frames, not HUHH events.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="../assets/site.js"></script>
+<script async src="https://widgets.givebutter.com/latest.umd.cjs?acct=GDTPx1yHlpTT6v1U&p=huhh-concept"></script>
+</body>
+</html>

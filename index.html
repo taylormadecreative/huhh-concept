@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Helping Us Help Her: Empowering teenage girls with purpose</title>
+<meta name="description" content="Since 2009, Helping Us Help Her has equipped teenage girls across Grand Prairie and Dallas–Fort Worth to know their worth, define themselves and go after their goals.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Helping Us Help Her">
+<meta property="og:title" content="Helping Us Help Her">
+<meta property="og:description" content="Developing the YOU in her, so everyone will desire to know the HER in you. Grand Prairie, Texas, since 2009.">
+<meta property="og:url" content="https://taylormadecreative.github.io/huhh-concept/">
+<meta property="og:image" content="https://taylormadecreative.github.io/huhh-concept/assets/img/og-home.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1ccdca">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,700..900&family=Figtree:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<script>document.documentElement.classList.replace("no-js","js");</script>
+<style>
+  /* Home */
+  .hero { background: var(--teal); color: var(--on-teal); padding-top: 118px; position: relative; }
+  .hero__inner { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gap); min-height: calc(100svh - 118px); }
+  .hero__copy { grid-column: 1 / 8; grid-row: 1; align-self: center; padding: 6vh 0 8vh; position: relative; z-index: 3; }
+  .hero__copy h1 { max-width: 12ch; }
+  .hero__copy .lede { margin: 28px 0 36px; }
+  .hero__cta { display: flex; flex-wrap: wrap; gap: 14px; }
+  .hero__art { grid-column: 7 / 13; grid-row: 1; align-self: end; position: relative; z-index: 2; margin-bottom: -140px; }
+  .hero__art .frame { aspect-ratio: 5 / 4; box-shadow: 0 30px 80px -30px rgba(10, 40, 44, 0.45); }
+  .hero__tile { position: absolute; left: -12%; bottom: 10%; width: 32%; aspect-ratio: 4 / 5; z-index: 3; box-shadow: 0 24px 60px -24px rgba(10, 40, 44, 0.55); }
+  .hero__pill { position: absolute; right: 0; top: -22px; background: var(--yellow); color: var(--ink); font: 600 var(--t-xs)/1 var(--body); letter-spacing: 0.08em; text-transform: uppercase; padding: 12px 16px; }
+  .after-hero { padding-top: 180px; }
+  @media (max-width: 1023px) {
+    .hero__inner { min-height: 0; }
+    .hero__copy { grid-column: 1 / -1; grid-row: auto; padding: 6vh 0 40px; }
+    .hero__art { grid-column: 1 / -1; grid-row: auto; margin-bottom: -60px; }
+    .hero__tile { display: none; }
+    .after-hero { padding-top: 110px; }
+  }
+
+  /* Creed */
+  .creed { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gap); row-gap: 40px; }
+  .creed__lead { grid-column: 1 / 7; }
+  .creed__lead h2 { max-width: 12ch; }
+  .creed__cols { grid-column: 7 / 13; display: grid; gap: 34px; }
+  .creed__cols h3 { font-size: var(--t-m); font-family: var(--body); font-weight: 700; margin-bottom: 8px; color: var(--teal-deep); }
+  .creed__cols p { margin: 0; max-width: 46ch; }
+  @media (max-width: 900px) { .creed__lead, .creed__cols { grid-column: 1 / -1; } }
+
+  /* Pinned story */
+  .pin { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gap); }
+  .pin__title { grid-column: 1 / 6; align-self: start; }
+  .pin__title h2 { max-width: 10ch; }
+  .pin__title p { margin-top: 24px; max-width: 34ch; }
+  .pin__items { grid-column: 7 / 13; display: grid; gap: clamp(64px, 9vw, 140px); }
+  .story h3 { margin: 22px 0 10px; }
+  .story p { margin: 0; max-width: 40ch; }
+  .story:nth-child(even) .frame { width: 82%; margin-left: auto; }
+  @media (max-width: 899px) { .pin__title, .pin__items { grid-column: 1 / -1; } .pin__items { margin-top: 48px; } }
+
+  /* Modules accordion */
+  .acc { display: flex; gap: 6px; height: clamp(520px, 62vh, 640px); margin-top: 48px; }
+  .acc__item { position: relative; flex: 1 1 0; min-width: 64px; overflow: hidden; background: var(--teal-ink); color: var(--cream); transition: flex 620ms var(--ease-in-out); }
+  .acc__item.is-open { flex: 4.6 1 0; }
+  .acc__item img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.55; transition: opacity 500ms ease, transform 900ms var(--ease-out); transform: scale(1.04); }
+  .acc__item.is-open img { opacity: 0.85; transform: scale(1); }
+  .acc__head { position: absolute; inset: 0; width: 100%; border: 0; background: transparent; color: inherit; cursor: pointer; text-align: left; padding: 0; }
+  .acc__num { position: absolute; top: 22px; left: 22px; font: 700 var(--t-s)/1 var(--body); background: var(--yellow); color: var(--ink); padding: 8px 10px; }
+  .acc__title { position: absolute; left: 22px; bottom: 26px; font-family: var(--display); font-weight: 800; font-size: var(--t-l); line-height: 1; writing-mode: vertical-rl; transform: rotate(180deg); transform-origin: center; white-space: nowrap; transition: opacity 260ms ease; }
+  .acc__item.is-open .acc__title { opacity: 0; }
+  .acc__body { position: absolute; left: 0; right: 0; bottom: 0; padding: 28px 26px 30px; background: linear-gradient(to top, rgba(18, 63, 69, 0.96), rgba(18, 63, 69, 0.0)); opacity: 0; visibility: hidden; transform: translateY(14px); transition: opacity 320ms ease 180ms, transform 420ms var(--ease-out) 180ms, visibility 0s linear 500ms; pointer-events: none; }
+  .acc__item.is-open .acc__body { opacity: 1; visibility: visible; transform: none; transition-delay: 180ms, 180ms, 0s; }
+  .acc__body h3 { font-size: var(--t-2xl); color: var(--cream); margin-bottom: 10px; }
+  .acc__body p { margin: 0; max-width: 44ch; color: var(--cream); }
+  @media (max-width: 899px) {
+    .acc { display: grid; height: auto; gap: 8px; }
+    .acc__item { min-height: 88px; flex: none; display: grid; }
+    .acc__item.is-open { flex: none; }
+    .acc__item img { position: absolute; }
+    .acc__head { position: relative; inset: auto; min-height: 88px; display: flex; align-items: center; gap: 16px; padding: 20px 22px; }
+    .acc__num { position: static; }
+    .acc__title { position: static; writing-mode: horizontal-tb; transform: none; font-size: var(--t-l); white-space: normal; }
+    .acc__item.is-open .acc__title { opacity: 1; }
+    .acc__body { position: relative; opacity: 1; visibility: visible; transform: none; pointer-events: auto; display: grid; grid-template-rows: 0fr; padding: 0 22px; transition: grid-template-rows 360ms var(--ease-in-out), padding 360ms var(--ease-in-out); background: rgba(18, 63, 69, 0.92); }
+    .acc__body > div { overflow: hidden; }
+    .acc__item.is-open .acc__body { grid-template-rows: 1fr; padding: 0 22px 24px; }
+    .acc__body h3 { display: none; }
+  }
+
+  /* Events */
+  .events { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gap); row-gap: 48px; margin-top: 48px; }
+  .event { grid-column: span 6; text-decoration: none; color: inherit; display: block; }
+  .event .frame { aspect-ratio: 3 / 2; }
+  .event img { transition: transform 900ms var(--ease-out); }
+  @media (hover: hover) and (pointer: fine) { .event:hover img { transform: scale(1.04); } }
+  .event__meta { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; margin-top: 18px; }
+  .event h3 { font-size: var(--t-2xl); }
+  .event p { margin: 10px 0 0; max-width: 40ch; }
+  .event__when { font: 700 var(--t-s)/1.3 var(--body); color: var(--teal-deep); white-space: nowrap; }
+  @media (max-width: 760px) { .event { grid-column: 1 / -1; } }
+
+  /* Give */
+  .give { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gap); row-gap: 40px; align-items: start; }
+  .give__copy { grid-column: 1 / 6; }
+  .give__copy h2 { max-width: 11ch; }
+  .give__widget { grid-column: 7 / 13; justify-self: start; width: 100%; max-width: 460px; background: var(--paper); color: var(--ink); padding: 8px; min-height: 420px; }
+  .give__alt { grid-column: 1 / 6; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .give__alt .frame { aspect-ratio: 1; }
+  .give__alt h3 { font-family: var(--body); font-size: var(--t-m); font-weight: 700; margin-bottom: 8px; color: var(--yellow); }
+  @media (max-width: 900px) { .give__copy, .give__widget, .give__alt { grid-column: 1 / -1; } .give__alt { grid-template-columns: 1fr; } }
+
+  /* Volunteer */
+  .vol { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gap); row-gap: 40px; align-items: center; }
+  .vol__art { grid-column: 1 / 6; }
+  .vol__form { grid-column: 7 / 13; }
+  .vol__form h2 { max-width: 12ch; margin-bottom: 18px; }
+  @media (max-width: 900px) { .vol__art, .vol__form { grid-column: 1 / -1; } }
+</style>
+</head>
+<body>
+<div id="loader" class="loader" aria-hidden="true">
+  <div class="loader__frames">
+    <img src="assets/img/home-hero-600.webp" alt="">
+    <img src="assets/img/story-5k-600.webp" alt="">
+    <img src="assets/img/give-hands-600.webp" alt="">
+    <img src="assets/img/golf-cart-600.webp" alt="">
+    <img src="assets/img/impact-cover-600.webp" alt="">
+  </div>
+  <img class="loader__mark" src="assets/img/logo-light.webp" alt="">
+</div>
+
+<a class="sr-only" href="#main">Skip to content</a>
+<header class="nav">
+  <a class="nav__logo" href="./" aria-label="Helping Us Help Her, home">
+    <img class="logo-light" src="assets/img/logo-light.webp" alt="">
+    <img class="logo-dark" src="assets/img/logo-dark.webp" alt="">
+  </a>
+  <ul class="nav__links">
+    <li><a href="#programs">Programs</a></li>
+    <li><a href="impact/">Impact report</a></li>
+    <li><a href="golf/">Golf Classic</a></li>
+    <li><a href="#volunteer">Volunteer</a></li>
+  </ul>
+  <div class="nav__cta"><a class="btn" href="#give">Give</a></div>
+  <button class="nav__burger" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+<nav id="menu" class="menu" aria-hidden="true">
+  <a href="#programs">Programs</a>
+  <a href="impact/">Impact report</a>
+  <a href="golf/">Golf Classic</a>
+  <a href="#give">Give</a>
+  <a href="#volunteer">Volunteer</a>
+  <p class="menu__meta">410 NW 11th St., Suite 113, Grand Prairie, Texas 75050<br>(972) 639-3096 · info@huhh.org</p>
+</nav>
+
+<main id="main">
+  <section class="hero wrap">
+    <div class="hero__inner">
+      <div class="hero__copy">
+        <h1 class="rv">Developing the <span class="yellow-mark">YOU</span> in her.</h1>
+        <p class="lede rv" data-delay="0.1">Since 2009, Helping Us Help Her has equipped teenage girls across Grand Prairie and Dallas–Fort Worth to know their worth, define themselves and go after their goals.</p>
+        <div class="hero__cta rv" data-delay="0.2">
+          <a class="btn" href="#give">Give today</a>
+          <a class="btn btn--ghost" href="impact/">See the impact report</a>
+        </div>
+      </div>
+      <div class="hero__art">
+        <span class="hero__pill">Grand Prairie, Texas</span>
+        <div class="frame rv-img"><img src="assets/img/home-hero-1536.webp" srcset="assets/img/home-hero-1000.webp 1000w, assets/img/home-hero-1536.webp 1536w" sizes="(max-width: 1023px) 100vw, 50vw" alt="Five girls, arms around each other, walking toward a lit stage" fetchpriority="high"></div>
+        <div class="frame hero__tile rv-img"><img src="assets/img/real-paint-450.webp" alt="Two HUHH girls painting at a program day"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee after-hero" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__item">Financial literacy <img src="assets/img/rings.webp" alt=""></span>
+      <span class="marquee__item">Leadership <img src="assets/img/rings.webp" alt=""></span>
+      <span class="marquee__item">Confidence and self-esteem <img src="assets/img/rings.webp" alt=""></span>
+      <span class="marquee__item">Wellness and mental health <img src="assets/img/rings.webp" alt=""></span>
+      <span class="marquee__item">Supportive networks <img src="assets/img/rings.webp" alt=""></span>
+      <span class="marquee__item">Academic and personal success <img src="assets/img/rings.webp" alt=""></span>
+      <span class="marquee__item">Community engagement <img src="assets/img/rings.webp" alt=""></span>
+      <span class="marquee__item">Financial literacy <img src="assets/img/rings.webp" alt=""></span>
+      <span class="marquee__item">Leadership <img src="assets/img/rings.webp" alt=""></span>
+      <span class="marquee__item">Confidence and self-esteem <img src="assets/img/rings.webp" alt=""></span>
+      <span class="marquee__item">Wellness and mental health <img src="assets/img/rings.webp" alt=""></span>
+      <span class="marquee__item">Supportive networks <img src="assets/img/rings.webp" alt=""></span>
+      <span class="marquee__item">Academic and personal success <img src="assets/img/rings.webp" alt=""></span>
+      <span class="marquee__item">Community engagement <img src="assets/img/rings.webp" alt=""></span>
+    </div>
+  </div>
+
+  <section class="wrap band">
+    <div class="creed">
+      <div class="creed__lead">
+        <h2 class="rv">She already has a purpose. We help her find it.</h2>
+      </div>
+      <div class="creed__cols">
+        <div class="rv"><h3>Vision</h3><p>Empowering girls to value their self worth and become valuable and successful women in life.</p></div>
+        <div class="rv" data-delay="0.08"><h3>Mission</h3><p>Through H.U.H.H., teen girls become capable of defining themselves, valuing their self worth and set on the right path to achieving their goals and dreams in life.</p></div>
+        <div class="rv" data-delay="0.16"><h3>How</h3><p>Educating, exposing and preparing young ladies, daily, to value their self worth in knowing who they are.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="rule"></div>
+
+  <section class="wrap band pin" data-pin>
+    <div class="pin__title">
+      <h2 class="rv">Seventeen years of showing up for her.</h2>
+      <p class="rv" data-delay="0.1">What began in 2009 through the vision of one young woman is now a curriculum, a mentorship track, a 5K in its fifteenth year and a golf classic in its third.</p>
+    </div>
+    <div class="pin__items">
+      <article class="story">
+        <div class="frame frame--4x5 rv-img"><img src="assets/img/story-notebook-1024.webp" srcset="assets/img/story-notebook-700.webp 700w, assets/img/story-notebook-1024.webp 1024w" sizes="(max-width: 899px) 100vw, 45vw" alt="A girl writing in a notebook at a kitchen table in morning light" loading="lazy"></div>
+        <h3 class="rv">Established 2009</h3>
+        <p class="rv">Founded through the vision of a young lady who felt her obstacles were not hers alone, but shared by so many other teenage girls.</p>
+      </article>
+      <article class="story">
+        <div class="frame frame--4x5 rv-img"><img src="assets/img/real-paint-450.webp" alt="Two HUHH girls in aprons painting side by side" loading="lazy"></div>
+        <h3 class="rv">Beyond Promises and Choices</h3>
+        <p class="rv">A school- and community-based curriculum of counseling, mentoring and soft-skills training for girls 13 to 18, built around eight impact modules.</p>
+      </article>
+      <article class="story">
+        <div class="frame frame--3x2 rv-img"><img src="assets/img/story-5k-1000.webp" srcset="assets/img/story-5k-600.webp 600w, assets/img/story-5k-1000.webp 1000w, assets/img/story-5k-1536.webp 1536w" sizes="(max-width: 899px) 100vw, 45vw" alt="Walkers crossing a balloon-arch start line at sunrise" loading="lazy"></div>
+        <h3 class="rv">Fifteen years of the 5K Walk-a-Thon</h3>
+        <p class="rv">The 15th Annual HUHH 5K Walk-a-Thon stepped off in Grand Prairie on May 30, 2026.</p>
+      </article>
+      <article class="story">
+        <div class="frame frame--4x5 rv-img"><img src="assets/img/story-mentor-1024.webp" srcset="assets/img/story-mentor-700.webp 700w, assets/img/story-mentor-1024.webp 1024w" sizes="(max-width: 899px) 100vw, 45vw" alt="A mentor and a teenager working together at a cafe window" loading="lazy"></div>
+        <h3 class="rv">The Mentorship Program</h3>
+        <p class="rv">Older HUHH participants matched with professionals in their field of interest, with support that carries from college into their careers.</p>
+      </article>
+      <article class="story">
+        <div class="frame frame--3x2 rv-img"><img src="assets/img/golf-cart-1000.webp" srcset="assets/img/golf-cart-600.webp 600w, assets/img/golf-cart-1000.webp 1000w, assets/img/golf-cart-1536.webp 1536w" sizes="(max-width: 899px) 100vw, 45vw" alt="A golf cart on a misty cart path at sunrise" loading="lazy"></div>
+        <h3 class="rv">The HUHH Golf Classic</h3>
+        <p class="rv">Three tournaments in. The 3rd Annual Charity Golf Tournament teed off at Waterchase Golf Club on July 17, 2026, with every dollar going to HUHH programs.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="programs" class="wrap band bg-ink on-dark">
+    <h2 class="rv">Eight modules. One girl at a time.</h2>
+    <p class="lede rv" data-delay="0.1">The Beyond Promises and Choices IMPACT curriculum, in the order a girl meets it. Tap or hover a module.</p>
+    <div class="acc" role="list">
+      <div class="acc__item" role="listitem">
+        <img src="assets/img/mod-best-in-me-700.webp" alt="" loading="lazy">
+        <button class="acc__head" aria-expanded="false"><span class="acc__num">01</span><span class="acc__title">The Best In Me</span></button>
+        <div class="acc__body"><div><h3>The Best In Me</h3><p>A reflection of who she is. Naming how others see her, and deciding for herself what really matters.</p></div></div>
+      </div>
+      <div class="acc__item" role="listitem">
+        <img src="assets/img/mod-what-is-beauty-700.webp" alt="" loading="lazy">
+        <button class="acc__head" aria-expanded="false"><span class="acc__num">02</span><span class="acc__title">What Is Beauty?</span></button>
+        <div class="acc__body"><div><h3>What Is Beauty?</h3><p>Manners, morals and makeup. The M3 of carrying yourself, with etiquette and values as a guide for everyday life.</p></div></div>
+      </div>
+      <div class="acc__item" role="listitem">
+        <img src="assets/img/mod-quote-unquote-700.webp" alt="" loading="lazy">
+        <button class="acc__head" aria-expanded="false"><span class="acc__num">03</span><span class="acc__title">Quote/Unquote</span></button>
+        <div class="acc__body"><div><h3>Quote/Unquote</h3><p>The need to know. Honest talk about social norms, and the decisions that sit behind them.</p></div></div>
+      </div>
+      <div class="acc__item" role="listitem">
+        <img src="assets/img/mod-girl-talk-700.webp" alt="" loading="lazy">
+        <button class="acc__head" aria-expanded="false"><span class="acc__num">04</span><span class="acc__title">Girl Talk</span></button>
+        <div class="acc__body"><div><h3>Girl Talk</h3><p>A safe circle for the unspoken words of teens, and the lesson that thoughts and actions shape a future.</p></div></div>
+      </div>
+      <div class="acc__item" role="listitem">
+        <img src="assets/img/mod-relationships-700.webp" alt="" loading="lazy">
+        <button class="acc__head" aria-expanded="false"><span class="acc__num">05</span><span class="acc__title">Relating to Relationships</span></button>
+        <div class="acc__body"><div><h3>Relating to Relationships</h3><p>Family, friends and connections. Seeing the difference between them, and knowing her own limits.</p></div></div>
+      </div>
+      <div class="acc__item" role="listitem">
+        <img src="assets/img/mod-conflict-700.webp" alt="" loading="lazy">
+        <button class="acc__head" aria-expanded="false"><span class="acc__num">06</span><span class="acc__title">Conflict Resolution</span></button>
+        <div class="acc__body"><div><h3>Conflict Resolution</h3><p>Finding peace in the middle of the storm, through exercises, examples and one-on-one conversations.</p></div></div>
+      </div>
+      <div class="acc__item" role="listitem">
+        <img src="assets/img/mod-future-me-700.webp" alt="" loading="lazy">
+        <button class="acc__head" aria-expanded="false"><span class="acc__num">07</span><span class="acc__title">Future Me</span></button>
+        <div class="acc__body"><div><h3>Future Me</h3><p>Academic readiness, leadership and wealth building. Goal setting, college and career prep, and financial literacy.</p></div></div>
+      </div>
+      <div class="acc__item" role="listitem">
+        <img src="assets/img/mod-ideal-woman-700.webp" alt="" loading="lazy">
+        <button class="acc__head" aria-expanded="false"><span class="acc__num">08</span><span class="acc__title">Ideal Woman</span></button>
+        <div class="acc__body"><div><h3>Ideal Woman</h3><p>Dress, presence and seizing the opportunity. Professional standards for a life she designs herself.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap band">
+    <h2 class="rv">In her words.</h2>
+    <div class="voices rv" data-delay="0.1">
+      <div class="voices__track" tabindex="0" aria-label="Alumni stories, use arrow keys to move">
+        <figure class="voice">
+          <blockquote>In the summer of 8th grade, I was invited to a HUHH retreat; that retreat forever changed my life.</blockquote>
+          <figcaption>Kendall Thomas <span>Grand Prairie ISD</span></figcaption>
+        </figure>
+        <figure class="voice">
+          <blockquote>I have been a part of HUHH before I was an official member. It has helped me to build my confidence and self-esteem.</blockquote>
+          <figcaption>Kamryn Whatley <span>Arlington ISD</span></figcaption>
+        </figure>
+        <figure class="voice">
+          <blockquote>I covered up my body with a purple jacket for the most part of my early teenage years. But when I became a part of HUHH, I learned to be confident and appreciate who I am. I learned how to love myself.</blockquote>
+          <figcaption>Reanna Dunlap <span>Grand Prairie ISD</span></figcaption>
+        </figure>
+      </div>
+      <div class="voices__nav">
+        <button type="button" data-prev aria-label="Previous story"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+        <button type="button" data-next aria-label="Next story"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+  </section>
+
+  <div class="rule"></div>
+
+  <section id="events" class="wrap band">
+    <h2 class="rv">2027. Save the dates.</h2>
+    <div class="events">
+      <a class="event rv" href="golf/">
+        <div class="frame rv-img"><img src="assets/img/golf-hero-1000.webp" srcset="assets/img/golf-hero-600.webp 600w, assets/img/golf-hero-1000.webp 1000w, assets/img/golf-hero-1536.webp 1536w" sizes="(max-width: 760px) 100vw, 50vw" alt="A misty fairway at dawn with a single yellow flag" loading="lazy"></div>
+        <div class="event__meta"><h3>4th Annual HUHH Golf Classic</h3><span class="event__when">Summer 2027</span></div>
+        <p>Sponsor a tier, field a team of four, or take a hole. Date and course to be announced.</p>
+      </a>
+      <a class="event rv" data-delay="0.1" href="impact/#events">
+        <div class="frame rv-img"><img src="assets/img/story-5k-1000.webp" srcset="assets/img/story-5k-600.webp 600w, assets/img/story-5k-1000.webp 1000w, assets/img/story-5k-1536.webp 1536w" sizes="(max-width: 760px) 100vw, 50vw" alt="Walkers under a balloon arch at the 5K start" loading="lazy"></div>
+        <div class="event__meta"><h3>16th Annual 5K Walk-a-Thon</h3><span class="event__when">Spring 2027</span></div>
+        <p>Grand Prairie's morning walk for the girls, sixteen years running. Date to be announced.</p>
+      </a>
+    </div>
+  </section>
+
+  <section id="give" class="wrap band bg-ink on-dark">
+    <div class="give">
+      <div class="give__copy">
+        <h2 class="rv">Your giving is a blessing for our girls.</h2>
+        <p class="lede rv" data-delay="0.1">Give once, or become a monthly donor at $25, $50 or $100 a month and keep every module, mentor match and event going.</p>
+        <p class="rv" data-delay="0.15">Your recurring gift supports mentorship, counseling and life-skills training, wellness activities and resources, and the events that bring the community together.</p>
+      </div>
+      <div class="give__widget rv" data-delay="0.1">
+        <givebutter-widget id="j13log"></givebutter-widget>
+        <noscript><p style="padding:20px">Give at <a href="https://huhh.org/donate/">huhh.org/donate</a>.</p></noscript>
+      </div>
+      <div class="give__alt">
+        <div class="frame rv-img"><img src="assets/img/give-hands-600.webp" alt="Hands cupping a seedling in soil" loading="lazy"></div>
+        <div class="rv">
+          <h3>Prefer Cash App?</h3>
+          <p>Send your gift to <a href="https://cash.app/$helpingushelpher">$helpingushelpher</a>. Every gift, any size, goes to the work.</p>
+          <h3>Sponsor an event</h3>
+          <p>Title, reception, beverage cart, hole and team sponsorships are open for the 2027 Golf Classic.</p>
+          <a class="btn btn--teal" href="golf/#sponsor">See the sponsor menu</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="volunteer" class="wrap band">
+    <div class="vol">
+      <div class="vol__art">
+        <div class="frame frame--4x5 rv-img"><img src="assets/img/volunteer-1000.webp" srcset="assets/img/volunteer-600.webp 600w, assets/img/volunteer-1000.webp 1000w" sizes="(max-width: 900px) 100vw, 40vw" alt="Volunteers handing out water at an outdoor event table" loading="lazy"></div>
+      </div>
+      <div class="vol__form">
+        <h2 class="rv">Volunteers are the heartbeat.</h2>
+        <p class="rv" data-delay="0.08">Give your time at the 5K, the Golf Classic, a program day, or on a committee. Tell us how you would like to help and a coordinator will reach out.</p>
+        <form class="form rv" data-demo novalidate data-delay="0.12">
+          <div class="form__fields">
+            <div class="row">
+              <div class="field"><label for="v-name">Name</label><input id="v-name" name="name" type="text" autocomplete="name" required></div>
+              <div class="field"><label for="v-email">Email</label><input id="v-email" name="email" type="email" autocomplete="email" required></div>
+            </div>
+            <div class="row">
+              <div class="field"><label for="v-phone">Phone</label><input id="v-phone" name="phone" type="tel" autocomplete="tel"></div>
+              <div class="field"><label for="v-how">How would you like to help?</label>
+                <select id="v-how" name="how" required>
+                  <option value="">Choose one</option>
+                  <option>Events (5K, Golf Classic)</option>
+                  <option>Program days and mentoring</option>
+                  <option>A committee</option>
+                  <option>Sponsorship and partnerships</option>
+                </select>
+              </div>
+            </div>
+            <p class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></p>
+            <div><button class="btn btn--ink" type="submit">Sign me up</button></div>
+            <p class="form__note">Concept preview: this form is not connected yet. On the live site it delivers to info@huhh.org.</p>
+          </div>
+          <div class="form__done" role="status">
+            <h3>Thank you, <span data-name></span>.</h3>
+            <p>A HUHH coordinator will be in touch. Until then, follow along on Instagram at <a href="https://www.instagram.com/helpingushelpher">@helpingushelpher</a>.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer wrap">
+  <div class="grid">
+    <div class="footer__brand">
+      <img src="assets/img/logo-light.webp" alt="Helping Us Help Her">
+      <p style="margin-top:18px">Developing the YOU in her, so everyone will desire to know the HER in you.</p>
+      <a href="https://maps.apple.com/?q=410+NW+11th+St+Suite+113+Grand+Prairie+TX+75050">410 NW 11th St., Suite 113<br>Grand Prairie, Texas 75050</a>
+      <a href="tel:+19726393096">(972) 639-3096</a>
+      <a href="mailto:info@huhh.org">info@huhh.org</a>
+      <div class="social">
+        <a href="https://www.facebook.com/helpingushelpher" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V14h2.8v8h3.3z"/></svg></a>
+        <a href="https://www.instagram.com/helpingushelpher" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7.3a4.7 4.7 0 1 0 0 9.4 4.7 4.7 0 0 0 0-9.4zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm6-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM21 8.2c-.1-1.5-.4-2.8-1.5-3.9S17.1 2.9 15.6 2.8c-1.5-.1-6-.1-7.5 0C6.6 2.9 5.3 3.2 4.2 4.3S2.8 6.7 2.7 8.2c-.1 1.5-.1 6 0 7.5.1 1.5.4 2.8 1.5 3.9s2.4 1.4 3.9 1.5c1.5.1 6 .1 7.5 0 1.5-.1 2.8-.4 3.9-1.5s1.4-2.4 1.5-3.9c.1-1.5.1-6 0-7.5zm-2 9.1c-.3.8-.9 1.4-1.7 1.7-1.2.5-4 .4-5.3.4s-4.1.1-5.3-.4c-.8-.3-1.4-.9-1.7-1.7-.5-1.2-.4-4-.4-5.3s-.1-4.1.4-5.3c.3-.8.9-1.4 1.7-1.7 1.2-.5 4-.4 5.3-.4s4.1-.1 5.3.4c.8.3 1.4.9 1.7 1.7.5 1.2.4 4 .4 5.3s.1 4.1-.4 5.3z"/></svg></a>
+        <a href="https://twitter.com/helpnushelpher" aria-label="X (Twitter)"><svg viewBox="0 0 24 24"><path d="M17.5 3h3l-6.6 7.6L21.7 21h-6.1l-4.8-6.2L5.3 21h-3l7.1-8.1L2 3h6.2l4.3 5.7L17.5 3zm-1.1 16.2h1.7L7.1 4.7H5.3l11.1 14.5z"/></svg></a>
+        <a href="https://www.youtube.com/channel/UC7iaYfW77EVEqkWyMZwsdFA" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 7.2c-.3-1-1-1.8-2-2C19.2 4.7 12 4.7 12 4.7s-7.2 0-9 .5c-1 .3-1.8 1-2 2C.5 9 .5 12 .5 12s0 3 .5 4.8c.3 1 1 1.8 2 2 1.8.5 9 .5 9 .5s7.2 0 9-.5c1-.3 1.8-1 2-2 .5-1.8.5-4.8.5-4.8s0-3-.5-4.8zM9.7 15.1V8.9l6 3.1-6 3.1z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer__col">
+      <h4>Programs</h4>
+      <a href="#programs">The eight modules</a>
+      <a href="impact/#programs">Choices Beyond Reality</a>
+      <a href="impact/#programs">Mentorship Program</a>
+    </div>
+    <div class="footer__col">
+      <h4>Events</h4>
+      <a href="golf/">Golf Classic 2027</a>
+      <a href="impact/#events">5K Walk-a-Thon</a>
+      <a href="impact/#events">Dream It Be It</a>
+    </div>
+    <div class="footer__col">
+      <h4>Support</h4>
+      <a href="#give">Give</a>
+      <a href="golf/#sponsor">Sponsor</a>
+      <a href="#volunteer">Volunteer</a>
+      <a href="impact/">Impact report</a>
+    </div>
+  </div>
+  <div class="footer__meta">
+    <p>© 2026 Helping Us Help Her. All rights reserved.</p>
+    <p>Concept preview by Taylormade Creative. Some photographs are creative-direction frames, not HUHH events.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/site.js"></script>
+<script async src="https://widgets.givebutter.com/latest.umd.cjs?acct=GDTPx1yHlpTT6v1U&p=huhh-concept"></script>
+</body>
+</html>
