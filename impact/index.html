@@ -32,7 +32,7 @@
   .cover__plate .kicker { color: var(--yellow); }
   .cover__plate p { margin: 18px 0 0; color: color-mix(in oklab, var(--cream) 85%, var(--teal)); }
   .cover__year { position: absolute; z-index: 2; right: var(--gutter); top: 130px; font-family: var(--display); font-weight: 900; font-size: var(--t-4xl); line-height: 0.85; color: var(--yellow); text-align: right; }
-  .cover__year small { display: block; font: 600 var(--t-xs)/1.4 var(--body); letter-spacing: 0.08em; text-transform: uppercase; color: var(--cream); margin-top: 8px; }
+  .cover__year small { display: block; font: 700 var(--t-s)/1.4 var(--body); color: var(--cream); margin-top: 8px; }
 
   /* Chapter nav */
   .chapters { position: sticky; top: 0; z-index: 40; background: var(--ink); color: var(--cream); overflow-x: auto; scrollbar-width: none; border-bottom: 1px solid color-mix(in oklab, var(--cream) 14%, transparent); }
@@ -41,14 +41,14 @@
   .chapters__home { display: block; width: 64px; height: 34px; margin-right: 14px; }
   .chapters__home img { width: 100%; height: 100%; object-fit: contain; }
   body.chapters-stuck .nav { transform: translateY(-100%); }
-  .chapters a { display: block; padding: 10px 14px; border-radius: 999px; font: 600 var(--t-s)/1 var(--body); text-decoration: none; color: var(--cream); white-space: nowrap; transition: background-color 200ms ease, color 200ms ease; }
+  .chapters a { display: block; padding: 10px 14px; border-radius: var(--radius); font: 600 var(--t-s)/1 var(--body); text-decoration: none; color: var(--cream); white-space: nowrap; transition: background-color 200ms ease, color 200ms ease; }
   .chapters a:hover, .chapters a.is-active { background: var(--yellow); color: var(--ink); }
 
   /* Founder */
   .founder { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gap); row-gap: 40px; align-items: center; }
   .founder__art { grid-column: 1 / 7; position: relative; }
   .founder__art .frame { aspect-ratio: 4 / 5; }
-  .founder__slot { position: absolute; left: 24px; bottom: 24px; background: var(--yellow); color: var(--ink); padding: 14px 16px; font: 600 var(--t-xs)/1.4 var(--body); letter-spacing: 0.06em; text-transform: uppercase; max-width: 26ch; }
+  .founder__slot { position: absolute; left: 24px; bottom: 24px; background: var(--yellow); color: var(--ink); padding: 14px 16px; font: 700 var(--t-s)/1.35 var(--body); max-width: 24ch; }
   .founder__copy { grid-column: 8 / 13; }
   .founder__copy h2 { max-width: 12ch; }
   .founder__copy blockquote { margin: 28px 0; font-family: var(--display); font-weight: 700; font-size: var(--t-l); line-height: 1.05; color: var(--teal-deep); }
@@ -58,7 +58,7 @@
 
   /* Numbers as a sentence */
   .numbers { font-family: var(--display); font-weight: 800; font-size: var(--t-3xl); line-height: 1.02; letter-spacing: -0.01em; max-width: 26ch; color: var(--on-teal); }
-  .numbers .num { color: var(--ink); display: inline-block; min-width: 1.2ch; }
+  .numbers .num { color: var(--ink); }
   .numbers p { margin: 0; max-width: none; }
   .numbers__note { margin-top: 32px; font: 400 var(--t-base)/1.55 var(--body); max-width: 56ch; letter-spacing: 0; color: var(--on-teal); }
 
@@ -124,7 +124,7 @@
 </head>
 <body>
 <a class="sr-only" href="#main">Skip to content</a>
-<header class="nav">
+<header class="nav nav--ink">
   <a class="nav__logo" href="../" aria-label="Helping Us Help Her, home">
     <img class="logo-light" src="../assets/img/logo-light.webp" alt="">
     <img class="logo-dark" src="../assets/img/logo-dark.webp" alt="">
@@ -144,7 +144,7 @@
   <a href="../golf/">Golf Classic</a>
   <a href="../#give">Give</a>
   <a href="../#volunteer">Volunteer</a>
-  <p class="menu__meta">410 NW 11th St., Suite 113, Grand Prairie, Texas 75050<br>(972) 639-3096 · info@huhh.org</p>
+  <p class="menu__meta">410 NW 11th St., Suite 113, Grand Prairie, Texas 75050<br><a href="tel:+19726393096">(972) 639-3096</a> · <a href="mailto:info@huhh.org">info@huhh.org</a></p>
 </nav>
 
 <main id="main">
@@ -176,13 +176,13 @@
   <section id="founder" class="wrap band">
     <div class="founder">
       <div class="founder__art">
-        <div class="frame rv-img"><img src="../assets/img/founder-stage-1000.webp" srcset="../assets/img/founder-stage-600.webp 600w, ../assets/img/founder-stage-1000.webp 1000w, ../assets/img/founder-stage-1536.webp 1536w" sizes="(max-width: 900px) 100vw, 50vw" alt="An empty stage with one stool under a warm spotlight, teal curtain behind" loading="lazy"></div>
-        <span class="founder__slot rv">Founder portrait, from the studio session</span>
+        <div class="frame rv-img"><img src="../assets/img/founder-stage-lit-1000.webp" srcset="../assets/img/founder-stage-lit-600.webp 600w, ../assets/img/founder-stage-lit-1000.webp 1000w, ../assets/img/founder-stage-lit-1536.webp 1536w" sizes="(max-width: 900px) 100vw, 50vw" alt="A lit stage with one stool under a spotlight, teal curtain behind" loading="lazy"></div>
+        <span class="founder__slot rv">Concept preview: the founder portrait goes here, from the photoshoot.</span>
       </div>
       <figure class="founder__copy">
-        <h2 class="rv">From the founder's desk.</h2>
+        <h2 class="rv">The founder.</h2>
         <blockquote class="rv" data-delay="0.08">We work daily on the vision by educating, exposing and preparing young ladies to value their self worth in knowing who they are in life.</blockquote>
-        <figcaption class="rv" data-delay="0.12">Dr. Dandreon Christian Gray <span>Founder and CEO, Helping Us Help Her. Consultant and trainer.</span></figcaption>
+        <figcaption class="rv" data-delay="0.12">Helping Us Help Her <span>Founder and CEO: Dr. Dandreon Gray, consultant and trainer.</span></figcaption>
         <p class="rv" data-delay="0.16" style="margin-top:24px">Founded through the vision of a young lady who felt her obstacles were not hers alone, HUHH prepares, educates and exposes teenage girls to the tools and experiences that shape a life: the ability to make choices, and to understand the consequences that follow.</p>
       </figure>
     </div>
@@ -191,13 +191,14 @@
   <section id="numbers" class="wrap band bg-teal on-teal">
     <div class="numbers">
       <p class="rv"><span class="num" data-count="17">17</span> years.</p>
-      <p class="rv" data-delay="0.06"><span class="num" data-count="15">15</span> annual 5K Walk-a-Thons.</p>
+      <p class="rv" data-delay="0.06"><span class="num" data-count="15">15</span> Walk-a-Thons.</p>
       <p class="rv" data-delay="0.12"><span class="num" data-count="3">3</span> Golf Classics.</p>
+      <p class="rv" data-delay="0.15"><span class="num" data-count="100" data-suffix="%">100%</span> of Golf Classic proceeds to programs.</p>
       <p class="rv" data-delay="0.18"><span class="num" data-count="8">8</span> impact modules.</p>
       <p class="rv" data-delay="0.24"><span class="num" data-count="11">11</span> mentorship topics.</p>
       <p class="rv" data-delay="0.3">One girl at a time.</p>
     </div>
-    <p class="numbers__note rv" data-delay="0.36">Every figure above comes from HUHH's own record of its programs and events. Add the number of girls served, the districts reached and the scholarships awarded, and this page becomes the case a sponsor can carry into a board meeting.</p>
+    <p class="numbers__note rv" data-delay="0.36">Concept preview: every figure above comes from huhh.org. Girls served, districts reached and scholarships awarded are HUHH's numbers to add; the band is built to carry them.</p>
   </section>
 
   <section id="timeline" class="wrap band">
@@ -214,7 +215,7 @@
       </div>
       <div class="tl__row rv">
         <div class="tl__year tl__year--word">Every year</div>
-        <div><h3>The Walk-a-Thon becomes a tradition</h3><p>A morning walk through Grand Prairie for the girls, repeated every year since. 2026 marked the 15th Annual HUHH 5K Walk-a-Thon.</p></div>
+        <div><h3>The Walk-a-Thon becomes a tradition</h3><p>A timed 5K and a morning walk through Grand Prairie for the girls. 2026 marked the 15th Annual HUHH 5K Walk-a-Thon at EPIC Central.</p></div>
       </div>
       <div class="tl__row rv">
         <div class="tl__year">2016</div>
@@ -253,7 +254,7 @@
         <div class="stack__art"><img src="../assets/img/mod-quote-unquote-700.webp" alt="" loading="lazy"></div>
         <div class="stack__body">
           <h3>Choices Beyond Reality</h3>
-          <p>Empowers teenagers to navigate and transcend the challenges of their diverse realities through culturally responsive, evidence-based education. Innovative, creative curriculum with differentiated instruction and personalization, built to run in partnership with school districts and institutions of higher learning.</p>
+          <p>Helps teenagers face the realities they live in and rise past them, with lessons that adapt to each student and a curriculum built to run inside school districts and colleges. Its aim: critical thinking, cultural competence, emotional resilience and community engagement.</p>
           <ul><li>Critical thinking</li><li>Cultural competence</li><li>Emotional resilience</li><li>Community engagement</li></ul>
         </div>
       </article>
@@ -262,7 +263,7 @@
         <div class="stack__body">
           <h3>The Mentorship Program</h3>
           <p>For older HUHH participants: one-on-one mentor relationships, career shadowing and internships, and another point of engagement that extends the HUHH platform beyond high school.</p>
-          <ul><li>Finding your career path</li><li>Understanding your communication style</li><li>Leadership skills</li><li>College preparation</li><li>Managing college life</li><li>Interview skills</li><li>Resume skills</li><li>Networking, online and in person</li><li>Online presence (LinkedIn and social)</li><li>Business and professional relationships</li></ul>
+          <ul><li>Finding your career path</li><li>Understanding your communication style</li><li>Leadership skills</li><li>College preparation</li><li>Managing college life</li><li>Managing virtual learning</li><li>Interview skills</li><li>Resume skills</li><li>Networking, online and in person</li><li>Online presence (LinkedIn and social)</li><li>Business and professional relationships</li></ul>
         </div>
       </article>
     </div>
@@ -300,13 +301,13 @@
       <article class="ev__item rv">
         <div class="frame rv-img"><img src="../assets/img/impact-cover-600.webp" alt="" loading="lazy"></div>
         <h3>Dream It Be It</h3>
-        <p>Career support for girls: a day of exposure, guidance and planning in Grand Prairie.</p>
+        <p>A leadership and educational lab day for girls 12 to 18, presented by Soroptimist International of Grand Prairie and supported by HUHH. Free, with lunch.</p>
         <p class="when">April 11, 2026 · 121 SW Dallas St., Grand Prairie</p>
       </article>
       <article class="ev__item rv" data-delay="0.08">
         <div class="frame rv-img"><img src="../assets/img/story-5k-600.webp" alt="" loading="lazy"></div>
         <h3>15th Annual 5K Walk-a-Thon</h3>
-        <p>Families, alumni, sponsors and the girls themselves, walking for HUHH since the early years.</p>
+        <p>Registration at 7, fun run at 7:30, the 5K at 8. A timed race at EPIC Central for the girls, and now the young men HUHH welcomes too.</p>
         <p class="when">May 30, 2026 · Grand Prairie · 16th annual in spring 2027</p>
       </article>
       <article class="ev__item rv" data-delay="0.16">
@@ -323,7 +324,7 @@
       <div class="ways__lead">
         <h2 class="rv">Where our help comes from.</h2>
         <p class="rv" data-delay="0.08" style="margin-top:20px">Volunteers, sponsors, partners and advocates. Here is how people join in.</p>
-        <a class="btn rv" data-delay="0.12" href="../golf/#sponsor">See the 2027 sponsor menu</a>
+        <a class="btn rv" data-delay="0.12" href="../golf/#sponsor">See the sponsor menu</a>
       </div>
       <div class="ways__list">
         <div class="rv"><h3>Volunteering</h3><p>The heartbeat of HUHH. Individuals with a genuine desire to serve and impact the lives of young girls, at events and program days.</p></div>
@@ -340,7 +341,7 @@
         <h2 class="rv">The next chapter.</h2>
         <ol>
           <li class="rv">Choices Beyond Reality in partnership with school districts and institutions of higher learning.</li>
-          <li class="rv" data-delay="0.06">A mentorship track that follows every graduate into college and her first career steps.</li>
+          <li class="rv" data-delay="0.06">A mentorship track that follows her past high school into college and her first career steps.</li>
           <li class="rv" data-delay="0.12">The 16th Annual 5K Walk-a-Thon and the 4th Annual Golf Classic in 2027.</li>
           <li class="rv" data-delay="0.18">More girls, more districts, more of the community in the room.</li>
         </ol>
@@ -365,26 +366,32 @@
 <footer class="footer wrap">
   <div class="grid">
     <div class="footer__brand">
-      <img src="../assets/img/logo-light.webp" alt="Helping Us Help Her">
+      <img src="../assets/img/logo-light-640.webp" alt="Helping Us Help Her">
       <p style="margin-top:18px">Developing the YOU in her, so everyone will desire to know the HER in you.</p>
       <a href="https://maps.apple.com/?q=410+NW+11th+St+Suite+113+Grand+Prairie+TX+75050">410 NW 11th St., Suite 113<br>Grand Prairie, Texas 75050</a>
       <a href="tel:+19726393096">(972) 639-3096</a>
       <a href="mailto:info@huhh.org">info@huhh.org</a>
+      <div class="social">
+        <a href="https://www.facebook.com/helpingushelpher" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V14h2.8v8h3.3z"/></svg></a>
+        <a href="https://www.instagram.com/helpingushelpher" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7.3a4.7 4.7 0 1 0 0 9.4 4.7 4.7 0 0 0 0-9.4zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm6-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM21 8.2c-.1-1.5-.4-2.8-1.5-3.9S17.1 2.9 15.6 2.8c-1.5-.1-6-.1-7.5 0C6.6 2.9 5.3 3.2 4.2 4.3S2.8 6.7 2.7 8.2c-.1 1.5-.1 6 0 7.5.1 1.5.4 2.8 1.5 3.9s2.4 1.4 3.9 1.5c1.5.1 6 .1 7.5 0 1.5-.1 2.8-.4 3.9-1.5s1.4-2.4 1.5-3.9c.1-1.5.1-6 0-7.5zm-2 9.1c-.3.8-.9 1.4-1.7 1.7-1.2.5-4 .4-5.3.4s-4.1.1-5.3-.4c-.8-.3-1.4-.9-1.7-1.7-.5-1.2-.4-4-.4-5.3s-.1-4.1.4-5.3c.3-.8.9-1.4 1.7-1.7 1.2-.5 4-.4 5.3-.4s4.1-.1 5.3.4c.8.3 1.4.9 1.7 1.7.5 1.2.4 4 .4 5.3s.1 4.1-.4 5.3z"/></svg></a>
+        <a href="https://twitter.com/helpnushelpher" aria-label="X (Twitter)"><svg viewBox="0 0 24 24"><path d="M17.5 3h3l-6.6 7.6L21.7 21h-6.1l-4.8-6.2L5.3 21h-3l7.1-8.1L2 3h6.2l4.3 5.7L17.5 3zm-1.1 16.2h1.7L7.1 4.7H5.3l11.1 14.5z"/></svg></a>
+        <a href="https://www.youtube.com/channel/UC7iaYfW77EVEqkWyMZwsdFA" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 7.2c-.3-1-1-1.8-2-2C19.2 4.7 12 4.7 12 4.7s-7.2 0-9 .5c-1 .3-1.8 1-2 2C.5 9 .5 12 .5 12s0 3 .5 4.8c.3 1 1 1.8 2 2 1.8.5 9 .5 9 .5s7.2 0 9-.5c1-.3 1.8-1 2-2 .5-1.8.5-4.8.5-4.8s0-3-.5-4.8zM9.7 15.1V8.9l6 3.1-6 3.1z"/></svg></a>
+      </div>
     </div>
     <div class="footer__col">
-      <h4>Programs</h4>
+      <h3>Programs</h3>
       <a href="../#programs">The eight modules</a>
       <a href="#programs">Choices Beyond Reality</a>
       <a href="#programs">Mentorship Program</a>
     </div>
     <div class="footer__col">
-      <h4>Events</h4>
+      <h3>Events</h3>
       <a href="../golf/">Golf Classic 2027</a>
       <a href="#events">5K Walk-a-Thon</a>
       <a href="#events">Dream It Be It</a>
     </div>
     <div class="footer__col">
-      <h4>Support</h4>
+      <h3>Support</h3>
       <a href="../#give">Give</a>
       <a href="../golf/#sponsor">Sponsor</a>
       <a href="../#volunteer">Volunteer</a>
@@ -393,7 +400,7 @@
   </div>
   <div class="footer__meta">
     <p>© 2026 Helping Us Help Her. All rights reserved.</p>
-    <p>Concept preview by Taylormade Creative. Some photographs are creative-direction frames, not HUHH events.</p>
+    <p>Concept preview by Taylormade Creative. Photographs of HUHH programs are from huhh.org; the rest are creative-direction frames, not HUHH events.</p>
   </div>
 </footer>
 
@@ -403,15 +410,22 @@
 <script>
   /* Chapter nav: highlight the section in view. */
   (function () {
-    var links = Array.prototype.slice.call(document.querySelectorAll(".chapters a"));
-    var map = {}; links.forEach(function (a) { var s = document.querySelector(a.getAttribute("href")); if (s) map[s.id] = a; });
+    var links = Array.prototype.slice.call(document.querySelectorAll(".chapters a")).filter(function (a) { return a.getAttribute("href").charAt(0) === "#"; });
+    var bar = document.querySelector(".chapters");
+    var map = {}; links.forEach(function (a) { var s = document.getElementById(a.getAttribute("href").slice(1)); if (s) map[s.id] = a; });
     if (!("IntersectionObserver" in window)) return;
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) { if (e.isIntersecting) { links.forEach(function (a) { a.classList.remove("is-active"); }); map[e.target.id].classList.add("is-active"); map[e.target.id].scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" }); } });
+      entries.forEach(function (e) {
+        if (!e.isIntersecting || !map[e.target.id]) return;
+        links.forEach(function (a) { a.classList.remove("is-active"); });
+        var a = map[e.target.id]; a.classList.add("is-active");
+        bar.scrollTo({ left: a.offsetLeft - bar.clientWidth / 2 + a.offsetWidth / 2, behavior: reduce ? "auto" : "smooth" });
+      });
     }, { rootMargin: "-40% 0px -55% 0px" });
     Object.keys(map).forEach(function (id) { io.observe(document.getElementById(id)); });
     var sentinel = document.getElementById("chapters-sentinel");
-    if (sentinel) new IntersectionObserver(function (e) { document.body.classList.toggle("chapters-stuck", !e[0].isIntersecting && e[0].boundingClientRect.top < 0); }, { threshold: 0 }).observe(sentinel);
+    if (sentinel) new IntersectionObserver(function (e) { document.body.classList.toggle("chapters-stuck", !e[0].isIntersecting && e[0].boundingClientRect.top < 96); }, { threshold: 0, rootMargin: "-96px 0px 0px 0px" }).observe(sentinel);
   })();
 </script>
 </body>
